@@ -14,15 +14,24 @@
 //     </div>
 //   );
 // };
-import Profile from "./components/Profile"
+import Profile from "./components/Profile";
+import user from "./data/user.json";
 
-const App = () => {
+const App = () => (
   <>
-  <h1>App example</h1>
-  <Profile username={"James"}>
+    <Profile 
+    username={user.username} 
+    tag={user.tag} 
+    location={user.location} 
+    avatar={user.avatar} 
+    statsFollower={user.stats.followers}
+    statsViews={user.stats.views}
+    statsLikes={user.stats.likes}
+    >
 
-  </Profile>
+    </Profile>
   </>
-}
+
+);
 
 export default App
