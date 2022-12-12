@@ -9,7 +9,6 @@ function getStatusClass (status) {
 };
 
 const FriendList = ({friendsArr}) => {
-  console.log(friendsArr[0].isOnline);
 
   return (
     <>
