@@ -16,6 +16,10 @@
 // };
 import Profile from "./components/Profile";
 import user from "./data/user.json";
+import Statistics from "components/Statistics";
+import data from "./data/data.json";
+import friends from "./data/friends.json";
+import FriendList from "./components/FriendList";
 
 const App = () => (
   <>
@@ -28,8 +32,11 @@ const App = () => (
     statsViews={user.stats.views}
     statsLikes={user.stats.likes}
     >
-
     </Profile>
+
+    <Statistics statistics={data}/>
+
+    <FriendList friendsArr={friends}/>
   </>
 
 );

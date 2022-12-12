@@ -1,26 +1,27 @@
-import "./Profile.css"
+import profileStyles from "./Profile.module.css";
+
 const Profile = ({username, tag, location, avatar, statsFollower, statsViews, statsLikes}) => {
 
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar"></img>
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+    <div className={profileStyles.profile}>
+      <div className={profileStyles.description}>
+        <img src={avatar} alt="User avatar" className={profileStyles.avatar}></img>
+        <p className={profileStyles.name}>{username}</p>
+        <p className={profileStyles.tag}>{tag}</p>
+        <p className={profileStyles.location}>{location}</p>
       </div>
-      <ul className="stats">
-        <li className="item">
-          <span className="label">Follower</span>
-          <span className="quantity">{statsFollower}</span>
+      <ul className={profileStyles.stats}>
+        <li className={profileStyles.item}>
+          <span className={profileStyles.label}>Follower</span>
+          <span className={profileStyles.quantity}>{statsFollower}</span>
         </li>
-        <li className="item">
-          <span className="label">Views</span>
-          <span className="quantity">{statsViews}</span>
+        <li className={profileStyles.item}>
+          <span className={profileStyles.label}>Views</span>
+          <span className={profileStyles.quantity}>{statsViews}</span>
         </li>
-        <li className="item">
-          <span className="label">Likes</span>
-          <span className="quantity">{statsLikes}</span>
+        <li className={profileStyles.item}>
+          <span className={profileStyles.label}>Likes</span>
+          <span className={profileStyles.quantity}>{statsLikes}</span>
         </li>
       </ul>
     </div>
