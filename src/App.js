@@ -1,11 +1,13 @@
-import Profile from "./components/Profile";
+import Profile from "./components/profile/Profile";
 import user from "./data/user.json";
-import Statistics from "components/Statistics";
+import Statistics from "components/statistics/Statistics";
 import data from "./data/data.json";
 import friends from "./data/friends.json";
-import FriendList from "./components/FriendList";
+import FriendList from "./components/friends-list/FriendList";
+
+// import friendListStyles from "./components/friends-list-item/FriendList.module.css";
 import transactions from "./data/transactions.json";
-import TransactionHistory from "./components/TransactionHistory";
+import TransactionHistory from "./components/transactions/TransactionHistory";
 
 const App = () => (
   <>
@@ -22,7 +24,9 @@ const App = () => (
 
     <Statistics statistics={data}/>
 
-    <FriendList friendsArr={friends}/>
+    <FriendList friendsArr={friends}>
+      
+    </FriendList>
 
     <TransactionHistory items={transactions}/>
   </>

@@ -1,4 +1,5 @@
 import profileStyles from "./Profile.module.css";
+import PropTypes from "prop-types";
 
 const Profile = ({username, tag, location, avatar, statsFollower, statsViews, statsLikes}) => {
 
@@ -27,5 +28,12 @@ const Profile = ({username, tag, location, avatar, statsFollower, statsViews, st
     </div>
   )
 };
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.
+}
 
 export default Profile

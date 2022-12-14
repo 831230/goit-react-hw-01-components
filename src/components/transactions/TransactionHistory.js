@@ -1,8 +1,6 @@
 import transactionsStyles from "./TransactionHistory.module.css";
 
 const TransactionHistory = ({items}) => {
-  // console.log(items);
-
   return (
     <section className={transactionsStyles.transaction}>
       {items && (
