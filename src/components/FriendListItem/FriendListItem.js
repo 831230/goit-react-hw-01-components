@@ -26,13 +26,14 @@ const FriendListItem = ({ friends }) => {
 };
 
 FriendListItem.propTypes = {
-  friends: PropTypes.array.isRequired,
-  optionalObjectWithShape: PropTypes.shape({
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
     avatar: PropTypes.string,
     name: PropTypes.string,
     isOnline: PropTypes.bool,
-    id: PropTypes.number,
-  }),
+    id: PropTypes.number
+    }),
+  )
 };
 
 export default FriendListItem;

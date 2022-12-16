@@ -1,7 +1,7 @@
 import friendListStyles from './FriendList.module.css';
 import PropTypes from 'prop-types';
 
-const FriendList = ({ friends, children }) => {
+const FriendList = ({ children }) => {
   return (
     <>
       <ul className={friendListStyles.friend_list}>{children}</ul>
@@ -10,13 +10,7 @@ const FriendList = ({ friends, children }) => {
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.array.isRequired,
-  optionalObjectWithShape: PropTypes.shape({
-    avatar: PropTypes.string,
-    name: PropTypes.string,
-    isOnline: PropTypes.bool,
-    id: PropTypes.number,
-  }),
+  children: PropTypes.element
 };
 
 export default FriendList;
