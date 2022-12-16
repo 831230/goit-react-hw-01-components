@@ -5,8 +5,6 @@ import data from './data/data.json';
 import friends from './data/friends.json';
 import FriendList from './components/FriendsList/FriendList';
 import FriendListItem from './components/FriendListItem/FriendListItem';
-
-// import friendListStyles from "./components/friends-list-item/FriendList.module.css";
 import transactions from './data/transactions.json';
 import TransactionHistory from './components/Transactions/TransactionHistory';
 
