@@ -20,9 +20,9 @@ const App = () => (
       statsLikes={user.stats.likes}
     ></Profile>
 
-    <Statistics statistics={data} />
+    <Statistics stats={data} title={"Upload stats"}/>
 
-    <FriendList>
+    <FriendList friends={friends}>
       <FriendListItem friends={friends} />
     </FriendList>
 
