@@ -1,10 +1,11 @@
 import friendListItemStyles from './FriendListItem.module.css';
 import PropTypes from 'prop-types';
 
-const FriendListItem = ({ friendsArray }) => {
+const FriendListItem = ({ friends }) => {
+  console.log(friends);
   return (
     <>
-      {friendsArray.map(friend => (
+      {friends.map(friend => (
         <li key={friend.id} className={friendListItemStyles.item}>
           <div
             className={`${friendListItemStyles.status} ${
@@ -26,7 +27,13 @@ const FriendListItem = ({ friendsArray }) => {
 };
 
 FriendListItem.propTypes = {
-  friendsArray: PropTypes.array.isRequired,
+  friends: PropTypes.array.isRequired,
+  optionalObjectWithShape: PropTypes.shape({
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isOnline: PropTypes.bool,
+    id: PropTypes.number,
+  }),
 };
 
 export default FriendListItem;
