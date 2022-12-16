@@ -20,7 +20,7 @@ const App = () => (
       statsLikes={user.stats.likes}
     ></Profile>
 
-    <Statistics stats={data} title={"Upload stats"}/>
+    <Statistics stats={data} title={'Upload stats'} />
 
     <FriendList>
       <FriendListItem friends={friends} />
